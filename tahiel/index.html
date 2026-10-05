@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación al cumpleaños de Thaiel</title>
+    <style>
+        /* Estilos generales y fondo principal */
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f7f5f0;
+            color: #4a4a4a;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Tarjeta principal con el mismo tono de fondo y bordes sutiles */
+        .card {
+            background-color: #f7f5f0; /* Mismo color que el body */
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid #e8e3d9;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        /* Imagen principal de portada con un contenedor limpio */
+        .card-header-img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Contenedor del texto de la tarjeta */
+        .card-content {
+            padding: 30px 30px 40px 30px;
+        }
+
+        /* Encabezado y títulos */
+        .subtitle {
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #8c857b;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin: 10px 0 20px 0;
+            font-weight: normal;
+        }
+
+        .divider {
+            width: 50px;
+            height: 1px;
+            background-color: #bea068;
+            margin: 20px auto;
+        }
+
+        /* Detalles del evento */
+        .details {
+            margin: 20px 0;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .details strong {
+            color: #2c3e50;
+        }
+
+        /* ESTILOS DEL ALMANAQUE */
+        .calendar-container {
+            background-color: #ffffff; /* Fondo blanco sutil para destacar el calendario dentro del tono general */
+            border: 1px solid #e0dcd3;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            font-family: sans-serif;
+        }
+
+        .calendar-header {
+            font-family: 'Georgia', serif;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        .calendar-day-name {
+            font-weight: bold;
+            color: #8c857b;
+            padding-bottom: 5px;
+        }
+
+        .calendar-day {
+            padding: 6px 0;
+            color: #4a4a4a;
+            border-radius: 50%;
+        }
+
+        /* Día resaltado */
+        .calendar-day.highlight {
+            background-color: #c5a059;
+            color: #ffffff;
+            font-weight: bold;
+            box-shadow: 0 2px 6px rgba(197, 160, 89, 0.4);
+        }
+
+        /* Cuenta regresiva */
+        .countdown-title {
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #8c857b;
+            margin-top: 25px;
+        }
+
+        .timer {
+            display: flex;
+            justify-content: space-around;
+            margin: 15px 0 25px 0;
+            background-color: #ffffff;
+            padding: 15px 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f0ece1;
+        }
+
+        .time-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .time-box span {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .time-box label {
+            font-size: 0.75rem;
+            color: #8c857b;
+            text-transform: uppercase;
+            margin-top: 4px;
+        }
+
+        /* Botones de acción */
+        .btn {
+            display: inline-block;
+            width: 100%;
+            background-color: #c5a059;
+            color: #ffffff;
+            padding: 12px 0;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .btn:hover {
+            background-color: #d8a340;
+        }
+
+        .btn-wp {
+            background-color: #25d366;
+        }
+
+        .btn-wp:hover {
+            background-color: #1eb857;
+        }
+
+        /* Pie de página */
+        .footer {
+            margin-top: 25px;
+            font-size: 0.85rem;
+            color: #999999;
+            font-style: italic;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .btn-group .btn {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <img src="foto1.jpeg" alt="Foto de Thaiel" class="card-header-img">
+
+        <div class="card-content">
+            <div class="subtitle">¡Mi cumple!</div>
+            <h1>THAIEL</h1>
+            
+            <div class="divider"></div>
+            
+            <p>"Es un gran motivo para celebrar, y tu presencia hace que este día sea especial."</p>
+        
+            <!-- ALMANAQUE DE NOVIEMBRE -->
+            <div class="calendar-container">
+                <div class="calendar-header">Noviembre 2026</div>
+                <div class="calendar-grid">
+                    <div class="calendar-day-name">D</div>
+                    <div class="calendar-day-name">L</div>
+                    <div class="calendar-day-name">M</div>
+                    <div class="calendar-day-name">X</div>
+                    <div class="calendar-day-name">J</div>
+                    <div class="calendar-day-name">V</div>
+                    <div class="calendar-day-name">S</div>
+
+                    <!-- Días del mes (Noviembre 2026 empieza en Domingo) -->
+                    <div class="calendar-day">1</div>
+                    <div class="calendar-day">2</div>
+                    <div class="calendar-day">3</div>
+                    <div class="calendar-day">4</div>
+                    <div class="calendar-day">5</div>
+                    <div class="calendar-day">6</div>
+                    <div class="calendar-day">7</div>
+                    <div class="calendar-day">8</div>
+                    <div class="calendar-day">9</div>
+                    <div class="calendar-day">10</div>
+                    <div class="calendar-day">11</div>
+                    <div class="calendar-day">12</div>
+                    <div class="calendar-day">13</div>
+                    <div class="calendar-day">14</div>
+                    <div class="calendar-day">15</div>
+                    <div class="calendar-day">16</div>
+                    <!-- Día resaltado -->
+                    <div class="calendar-day highlight">17</div>
+                    <div class="calendar-day">18</div>
+                    <div class="calendar-day">19</div>
+                    <div class="calendar-day">20</div>
+                    <div class="calendar-day">21</div>
+                    <div class="calendar-day">22</div>
+                    <div class="calendar-day">23</div>
+                    <div class="calendar-day">24</div>
+                    <div class="calendar-day">25</div>
+                    <div class="calendar-day">26</div>
+                    <div class="calendar-day">27</div>
+                    <div class="calendar-day">28</div>
+                    <div class="calendar-day">29</div>
+                    <div class="calendar-day">30</div>
+                </div>
+            </div>
+
+            <div class="details">
+                <p><strong>⏰ Hora:</strong> 18:00 hs</p>
+                <p><strong>📍 Lugar:</strong> Francisco Siritto 218</p>
+            </div>
+
+            <!-- Sección de Cuenta Regresiva -->
+            <div class="countdown-title">Falta tan solo:</div>
+            <div class="timer">
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <label>Días</label>
+                </div>
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <label>Hs</label>
+                </div>
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <label>Min</label>
+                </div>
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <label>Seg</label>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Botones -->
+            <a href="https://maps.app.goo.gl/DaMDJAsnfuR8LtpJ8" target="_blank" class="btn">Ver Ubicación en Maps</a>
+            
+            <div class="btn-group">
+                <a href="https://wa.me/+5491171051006?text=%C2%A1Hola!%20Confirmo%20mi%20asistencia%20al%20cumple." target="_blank" class="btn btn-wp">Confirmar con Yamila</a>
+            </div>
+
+            <div class="footer">
+                Por favor, confirmar asistencia
+            </div>
+        </div>
+    </div>
+
+    <!-- Lógica del Contador -->
+    <script>
+        const eventDate = new Date(2026, 10, 17, 18, 0, 0).getTime();
+
+        const updateCountdown = () => {
+            const now = new Date().getTime();
+            const difference = eventDate - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById('days').innerText = days < 10 ? '0' + days : days;
+                document.getElementById('hours').innerText = hours < 10 ? '0' + hours : hours;
+                document.getElementById('minutes').innerText = minutes < 10 ? '0' + minutes : minutes;
+                document.getElementById('seconds').innerText = seconds < 10 ? '0' + seconds : seconds;
+            } else {
+                document.querySelector('.timer').innerHTML = "<b style='color: #c5a059;'>¡Llegó el gran día!</b>";
+            }
+        };
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
